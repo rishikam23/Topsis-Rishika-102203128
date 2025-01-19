@@ -31,10 +31,10 @@ python <program.py> <InputDataFile> <Weights> <Impacts> <OutputFileName>
 ```
 ### Parameter Description
 
-```<InputDataFile>:``` The path to the input file (in .csv) containing the decision matrix.
-```<Weights>:``` A comma-separated list of weights for the criteria (e.g., 1,1,2,1).
-```<Impacts>:``` A comma-separated list of impacts for the criteria (+ for maximization and - for minimization) (e.g., +,+,-,+).
-```<ResultFileName>:``` The name of the output file where the results will be saved (e.g., result.csv).
+- ```<InputDataFile>:``` The path to the input file (in .csv) containing the decision matrix.
+- ```<Weights>:``` A comma-separated list of weights for the criteria (e.g., 1,1,2,1).
+- ```<Impacts>:``` A comma-separated list of impacts for the criteria (+ for maximization and - for minimization) (e.g., +,+,-,+).
+- ```<ResultFileName>:``` The name of the output file where the results will be saved (e.g., result.csv).
 
 ## Important Notes
 
@@ -48,13 +48,13 @@ python <program.py> <InputDataFile> <Weights> <Impacts> <OutputFileName>
 
 This package includes robust exception handling to ensure smooth execution and to provide clear feedback to users. The following error scenarios are handled:
 
-    File Not Found: If the input file cannot be found, an error message will be displayed, and the process will terminate.
+    - File Not Found: If the input file cannot be found, an error message will be displayed, and the process will terminate.
 
-    Mismatched Parameters: If the number of weights or impacts does not match the number of criteria in the input file, an error will be thrown.
+    - Mismatched Parameters: If the number of weights or impacts does not match the number of criteria in the input file, an error will be thrown.
 
-    Non-Numeric Values: The package ensures that all criteria columns contain numeric values only. If any non-numeric value is encountered, an error will be raised.
+    - Non-Numeric Values: The package ensures that all criteria columns contain numeric values only. If any non-numeric value is encountered, an error will be raised.
     
-    Invalid Impacts: The impacts provided must be either + (for maximization) or - (for minimization). If any invalid characters are provided, an error will be thrown.
+    - Invalid Impacts: The impacts provided must be either + (for maximization) or - (for minimization). If any invalid characters are provided, an error will be thrown.
 
 This makes it easier for users to identify and resolve issues in their input data and ensures the correctness of the decision-making process.
 
